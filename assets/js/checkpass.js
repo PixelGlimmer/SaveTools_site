@@ -16,4 +16,4 @@
             if (e.key === 'Enter') {
                 checkPassword();
             }
-        });1
+        });
