@@ -5,55 +5,6 @@
     <title>SaveTools</title>
     <link rel="shortcut icon" href="assets/img/ST.png" type="image/png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .password-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        
-        .password-box {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            color: #fff;
-        }
-        
-        .password-box input {
-            padding: 10px;
-            margin: 10px 0;
-            width: 200px;
-            border: none;
-            border-radius: 3px;
-        }
-        
-        .password-box button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        
-        .password-box button:hover {
-            background-color: #45a049;
-        }
-        
-        .error-message {
-            color: #ff4444;
-            margin-top: 10px;
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <div class="password-overlay" id="passwordOverlay">
@@ -70,7 +21,6 @@
         <h1>SaveTools</h1>
         <p>Добро пожаловать на SaveTools! Ниже вы можете скачать нужные утилиты:</p>
         <ul id="program-list">
-            <!-- Примеры -->
             <li><strong>Process Hacker</strong> - расширенный диспетчер задач <br>Размер: 7MB - <a href="downloads/processhacker-2.39-setup.exe" download>Скачать</a></li>
             <li><strong>zapret-discord-youtube</strong> - Анти-Запрет ютуб и дискорд <br>Размер: Неизвестно - <a href="https://github.com/Flowseal/zapret-discord-youtube/releases" download>Скачать</a></li>
             <li><strong>DaVinci Resolve</strong> - Видеоредактор для монтажа видео <br>Размер: 6,77GB - <a href="downloads/[NNMClub.to]_Blackmagic Design DaVinci Resolve Studio 20.0.1 Build 6 RePack by KpoJIuK.torrent" download>Скачать</a></li>
@@ -81,29 +31,11 @@
             <li><strong>Uninstall Tool</strong> - утилита, позволяющая отслеживать процессы автозапуска и выполнять несколько действий с установленными программами – удалять, деинсталлировать, следить за появлением новых установок  <br>Размер: 13MB - <a href="downloads/Uninstall Tool.zip" download>Скачать</a></li>
             <li><strong>MakuOS 10 Lite</strong> - Опереционная система Windows 10 от Аддерли. Без Windows Defender, центра обновлений, и какого либо мусора. <br>Размер: 3,64GB - <a href="https://drive.usercontent.google.com/download?id=1BffklbcGBZ4u-u-X8l8kzArzguIA4AYi&export=download&authuser=0&confirm=t&uuid=bf7c1bf2-cbe9-4e95-b443-18aec17192fe&at=AN8xHoqIlZ9ZjQUaPbmrVHjBeVc6%3A1753848217592" download>Скачать</a></li>
             <li><strong>MakuOS 7</strong> - Опереционная система Windows 7 от Аддерли. Сборка на основе Windows 7 со всеми обновлениями по 2020 год. <br>Размер: 4,79GB - <a href="https://download2270.mediafire.com/g4i52ci5swuggKaR7Xj541TbvvPIL9R3xAiYL-Kq4FDbVB3pjWkwapAJjJEJWlFvG-FBPAgnHHvMP3vhUKsH1iuN5avPledFWEj4gdlQ0z0c9HAgBE_e6WX4Y2NCCA3wRAfR4ZsebE3wPwx1yMAqDlZb06lgsIA5YBg4qj4TEKKHyAKR/sl3yrml4gt1v3u6/MakuOS+7.iso" download>Скачать</a></li>
+            <li><strong>Maku Tweaker</strong> - MakuTweaker позволяет очень гибко и эластично настроить вашу систему под себя, включая удаление неудаляемых приложений, а также различные параметры реестра, которые недоступны простым пользователям! <br>Размер: 9.14MB - <a href="downloads/MakuTweaker Setup.exe" download>Скачать</a></li>
+            <li><strong>AnyDesk</strong> - Это немецкое проприетарноеприложение для удаленного рабочего стола , распространяемое AnyDesk Software GmbH. Программное обеспечение обеспечивает независимый от платформы удаленный доступ к персональным компьютерам и другим устройствам, на которых запущено хост-приложение. Он предлагает функции дистанционного управления, передачи файлов и VPN <br>Размер: 7.56MB - <a href="downloads/AnyDesk.exe" download>Скачать</a></li>
         </ul>
     </div>
     <script src="assets/js/matrix.js"></script>
-    <script>
-        function checkPassword() {
-            const password = document.getElementById('passwordInput').value;
-            const correctPassword = 'SaveTools_Pixel_And_No_Spam';
-            const errorMessage = document.getElementById('errorMessage');
-            
-            if (password === correctPassword) {
-                document.getElementById('passwordOverlay').style.display = 'none';
-            } else {
-                errorMessage.style.display = 'block';
-                document.getElementById('passwordInput').value = '';
-            }
-        }
-        
-        // Обработка нажатия Enter в поле пароля
-        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkPassword();
-            }
-        });
-    </script>
+    <script src="assets/js/checkpass.js"></script>
 </body>
 </html>
