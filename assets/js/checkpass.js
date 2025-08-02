@@ -1,6 +1,6 @@
    function checkPassword() {
             const password = document.getElementById('passwordInput').value;
-            const correctPassword = 'SaveTools_Pixel_And_No_Spam';
+            const correctPassword = '123321';
             const errorMessage = document.getElementById('errorMessage');
             
             if (password === correctPassword) {
